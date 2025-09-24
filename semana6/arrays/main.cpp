@@ -11,6 +11,13 @@ int sum=0;
         sum = sum + arr[i];
     return sum;
 }
+long sumarR(int arr[], int tam) {
+ if (tam==0) {
+  return arr[0];
+ }else{
+  return arr[tam-1] + sumarR (arr, tam-1);
+ }
+}
 int main()
 {
     int arr[4];
