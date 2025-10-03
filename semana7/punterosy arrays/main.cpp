@@ -38,5 +38,22 @@ int main()
     for(int i = 0; i < 5; i++, ptr2++)
         cout << *ptr2 << " ";
         cout << endl;
+    int *ptr3 = arr+4;
+    for(int i=0; i<5; i++, ptr3--)
+        cout << *ptr3 << " ";
+    cout << endl;
+
+    int *ptr5 = arr;
+    while(ptr5 < (arr+5)){
+        cout << *ptr5 << " ";
+        ptr5++;
+    }
+    cout << endl;
+    int *ptr4 = arr+4;
+    while(ptr4 >= (arr)){
+        cout << *ptr4 << " ";
+        ptr4--;
+    }
+    cout << endl;
     return 0;
 }
