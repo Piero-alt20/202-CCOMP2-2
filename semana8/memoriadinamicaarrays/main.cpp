@@ -29,8 +29,49 @@ void bubblesort(int *ptr, int tam){
 /**
 *tarea
 * Insertionsort
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int j = i;
+        
+        // Mientras no estemos al inicio y el elemento actual sea menor que el anterior:
+        while (j > 0 && arr[j] < arr[j - 1]) {
+            // Realiza el intercambio (swap)
+            swap(arr[j], arr[j - 1]); 
+            j--;
+        }
+    }
+}
 *mergesort
 *quicksort
+void swap(int& a, int& b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+// 2. Función de Partición
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high]; 
+    int i = (low - 1); 
+
+    for (int j = low; j <= high - 1; j++) {
+        if (arr[j] <= pivot) {
+            i++; 
+            swap(arr[i], arr[j]); // *** Uso de swap aquí ***
+        }
+    }
+    swap(arr[i + 1], arr[high]); // *** Uso de swap aquí para colocar el pivote ***
+    return (i + 1); 
+}
+
+// 3. Función Principal de Quick Sort
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
 */
 
 int main()
