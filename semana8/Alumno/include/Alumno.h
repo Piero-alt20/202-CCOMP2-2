@@ -7,6 +7,7 @@ class Alumno
     public:
         Alumno();
         Alumno(char* _nombre, int _edad);
+        void print()const;
         ~Alumno();
 
 
