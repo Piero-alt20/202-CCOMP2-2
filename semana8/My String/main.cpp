@@ -1,9 +1,12 @@
 #include <iostream>
-
+#include "MyString.h"
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    MyString ms("ciencia de la computacion");
+
+    cout << ms.getData() << endl;
+
     return 0;
 }
