@@ -10,7 +10,8 @@ class DynamicIntegerArra
 
         int getSize() const;
         void print() const;
-
+        void insert(int val, int pos);
+        void remove (int pos);
         void push_back(int val);
 
 
